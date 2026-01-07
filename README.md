@@ -1,12 +1,22 @@
 
 # 📚 IBM FST Training Resources
 
-Welcome to the **IBM Full Stack Training** resource hub! Below are the links to the training slides for **Java**, **Python**, and **SQL** along with their respective passwords.
+Welcome to the **IBM QE-DATA Training** resource hub! Below are the links to the training slides for **Java**, **Python**, and **SQL** along with their respective passwords.
 
 ---
 
 ## 🔹 Java Slides
-[View Java Slides](https://slides.com/chandrak/ibm-fst-java-v2-f58083/fullscreen?token=U(https://slides.com/chandrak/dist-ibm-fst-python-v2/fullscreen?token=oiuBaNf4* `e1car0`
+[View Java Slides](https://slides.com/chandrak/ibm-fst-java-v2-f58083/fullscreen?token=U(https://slides.com/chandrak/dist-ibm-fst-python-v2/fullscreen?token=oiuBaNf4) `e1car0`
+
+---
+
+## 🔹 Python Slides
+[View python Slides](https://slides.com/chandrak/ibm-fst-java-v2-f58083/fullscreen?token=U(https://slides.com/chandrak/dist-ibm-fst-python-v2/fullscreen?token=oiuBaNf4* `e1car0`
+
+---
+
+## 🔹 SQL Slides
+[View sql Slides](https://slides.com/chandrak/ibm-fst-java-v2-f58083/fullscreen?token=U(https://slides.com/chandrak/dist-ibm-fst-python-v2/fullscreen?token=oiuBaNf4* `e1car0`
 
 ---
 
