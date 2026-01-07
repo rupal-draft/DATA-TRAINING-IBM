@@ -1,5 +1,5 @@
 
-# 📚 IBM FST Training Resources
+# 📚 IBM QE-DATA Training Resources
 
 Welcome to the **IBM QE-DATA Training** resource hub! Below are the links to the training slides for **Java**, **Python**, and **SQL** along with their respective passwords.
 
