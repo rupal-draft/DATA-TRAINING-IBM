@@ -1,0 +1,170 @@
+Dec 19, 2025 9:10:15 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre1.8.0_471\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Java\jre1.8.0_471;C:\Users\RupalPaul\AppData\Local\Microsoft\WindowsApps;;.
+Dec 19, 2025 9:10:15 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Dec 19, 2025 9:10:15 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 494 ms
+Dec 19, 2025 9:10:15 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Dec 19, 2025 9:10:15 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.30
+Dec 19, 2025 9:10:15 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Dec 19, 2025 9:10:15 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Dec 19, 2025 9:10:15 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive abcbank.war
+Dec 19, 2025 9:10:15 AM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(C:\Users\RupalPaul\Desktop\ABCBank-V.1.2\ABCBank-V.1.2\apache-tomcat-6.0.30\webapps\abcbank\WEB-INF\lib\servlet-2.3.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Dec 19, 2025 9:10:16 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Dec 19, 2025 9:10:16 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Dec 19, 2025 9:10:16 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Dec 19, 2025 9:10:16 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Dec 19, 2025 9:10:16 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Dec 19, 2025 9:10:16 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/16  config=null
+Dec 19, 2025 9:10:16 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 850 ms
+Dec 19, 2025 10:42:58 AM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Dec 19, 2025 10:42:59 AM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Dec 19, 2025 10:42:59 AM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+Dec 19, 2025 11:29:17 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre1.8.0_471\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Java\jre1.8.0_471;C:\Users\RupalPaul\AppData\Local\Microsoft\WindowsApps;;.
+Dec 19, 2025 11:29:18 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Dec 19, 2025 11:29:18 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 421 ms
+Dec 19, 2025 11:29:18 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Dec 19, 2025 11:29:18 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.30
+Dec 19, 2025 11:29:18 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Dec 19, 2025 11:29:18 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Dec 19, 2025 11:29:18 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive abcbank.war
+Dec 19, 2025 11:29:18 AM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(C:\Users\RupalPaul\Desktop\ABCBank-V.1.2\ABCBank-V.1.2\apache-tomcat-6.0.30\webapps\abcbank\WEB-INF\lib\servlet-2.3.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Dec 19, 2025 11:29:18 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Dec 19, 2025 11:29:18 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Dec 19, 2025 11:29:18 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Dec 19, 2025 11:29:18 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Dec 19, 2025 11:29:19 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Dec 19, 2025 11:29:19 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/17  config=null
+Dec 19, 2025 11:29:19 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 802 ms
+Dec 19, 2025 11:31:05 AM org.apache.jasper.compiler.JDTCompiler$1 findType
+SEVERE: Compilation error
+org.eclipse.jdt.internal.compiler.classfmt.ClassFormatException
+	at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:342)
+	at org.apache.jasper.compiler.JDTCompiler$1.findType(JDTCompiler.java:206)
+	at org.apache.jasper.compiler.JDTCompiler$1.findType(JDTCompiler.java:163)
+	at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:96)
+	at org.eclipse.jdt.internal.compiler.lookup.UnresolvedReferenceBinding.resolve(UnresolvedReferenceBinding.java:49)
+	at org.eclipse.jdt.internal.compiler.lookup.BinaryTypeBinding.resolveType(BinaryTypeBinding.java:97)
+	at org.eclipse.jdt.internal.compiler.lookup.PackageBinding.getTypeOrPackage(PackageBinding.java:167)
+	at org.eclipse.jdt.internal.compiler.lookup.Scope.getType(Scope.java:2187)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:974)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1164)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:366)
+	at org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:623)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:392)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:429)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:349)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:327)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:314)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:592)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:326)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:313)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:260)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:646)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:436)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:374)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:302)
+	at net.sourceforge.stripes.action.ForwardResolution.execute(ForwardResolution.java:110)
+	at net.sourceforge.stripes.controller.DispatcherHelper$7.intercept(DispatcherHelper.java:508)
+	at net.sourceforge.stripes.controller.ExecutionContext.proceed(ExecutionContext.java:158)
+	at net.sourceforge.stripes.controller.HttpCacheInterceptor.intercept(HttpCacheInterceptor.java:99)
+	at net.sourceforge.stripes.controller.ExecutionContext.proceed(ExecutionContext.java:155)
+	at net.sourceforge.stripes.controller.BeforeAfterMethodInterceptor.intercept(BeforeAfterMethodInterceptor.java:113)
+	at net.sourceforge.stripes.controller.ExecutionContext.proceed(ExecutionContext.java:155)
+	at net.sourceforge.stripes.controller.ExecutionContext.wrap(ExecutionContext.java:74)
+	at net.sourceforge.stripes.controller.DispatcherHelper.executeResolution(DispatcherHelper.java:502)
+	at net.sourceforge.stripes.controller.DispatcherServlet.executeResolution(DispatcherServlet.java:286)
+	at net.sourceforge.stripes.controller.DispatcherServlet.service(DispatcherServlet.java:170)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:717)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at net.sourceforge.stripes.controller.StripesFilter.doFilter(StripesFilter.java:247)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at online.abc.SecurityFilter.doFilter(SecurityFilter.java:46)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:859)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Unknown Source)
+
+Dec 19, 2025 11:35:07 AM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Dec 19, 2025 11:35:08 AM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Dec 19, 2025 11:35:08 AM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+Dec 19, 2025 11:35:23 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre1.8.0_471\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Java\jre1.8.0_471;C:\Users\RupalPaul\AppData\Local\Microsoft\WindowsApps;;.
+Dec 19, 2025 11:35:23 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Dec 19, 2025 11:35:23 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 328 ms
+Dec 19, 2025 11:35:23 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Dec 19, 2025 11:35:23 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.30
+Dec 19, 2025 11:35:23 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Dec 19, 2025 11:35:23 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Dec 19, 2025 11:35:23 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive abcbank.war
+Dec 19, 2025 11:35:23 AM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(C:\Users\RupalPaul\Desktop\ABCBank-V.1.2\ABCBank-V.1.2\apache-tomcat-6.0.30\webapps\abcbank\WEB-INF\lib\servlet-2.3.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Dec 19, 2025 11:35:23 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Dec 19, 2025 11:35:23 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Dec 19, 2025 11:35:23 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Dec 19, 2025 11:35:23 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Dec 19, 2025 11:35:23 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Dec 19, 2025 11:35:23 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/13  config=null
+Dec 19, 2025 11:35:23 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 631 ms

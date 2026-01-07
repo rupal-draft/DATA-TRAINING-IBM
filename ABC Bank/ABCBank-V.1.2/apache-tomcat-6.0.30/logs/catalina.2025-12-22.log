@@ -1,0 +1,38 @@
+Dec 22, 2025 9:30:37 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre1.8.0_471\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Java\jre1.8.0_471;C:\Users\RupalPaul\AppData\Local\Microsoft\WindowsApps;;.
+Dec 22, 2025 9:30:37 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+Dec 22, 2025 9:30:37 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 245 ms
+Dec 22, 2025 9:30:37 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Dec 22, 2025 9:30:37 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.30
+Dec 22, 2025 9:30:37 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Dec 22, 2025 9:30:37 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Dec 22, 2025 9:30:37 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive abcbank.war
+Dec 22, 2025 9:30:37 AM org.apache.catalina.loader.WebappClassLoader validateJarFile
+INFO: validateJarFile(C:\Users\RupalPaul\Desktop\ABCBank-V.1.2\ABCBank-V.1.2\apache-tomcat-6.0.30\webapps\abcbank\WEB-INF\lib\servlet-2.3.jar) - jar not loaded. See Servlet Spec 2.3, section 9.7.2. Offending class: javax/servlet/Servlet.class
+Dec 22, 2025 9:30:37 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Dec 22, 2025 9:30:37 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Dec 22, 2025 9:30:37 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Dec 22, 2025 9:30:37 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+Dec 22, 2025 9:30:37 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Dec 22, 2025 9:30:37 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/12  config=null
+Dec 22, 2025 9:30:37 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 549 ms
+Dec 22, 2025 12:56:34 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Dec 22, 2025 12:56:35 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Dec 22, 2025 12:56:35 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
