@@ -160,3 +160,47 @@ BEGIN
    END LOOP;
 END;
 /
+
+
+
+
+-- # Scenario 3: The "Duplicate Revenue" (Uniqueness/ETL Logic)
+-- ## The Problem
+-- The CEO noticed that the total revenue for yesterday is exactly double what was expected.
+-- ## The Suspicion
+-- You suspect the ETL job was accidentally run twice without a "Truncate" or "Delete" step, or the INSERT logic is missing a check for existing order_ids, resulting in every order being duplicated in the Production table.
+-- ## Your Task
+-- Write a PL/SQL block that counts how many order_ids appear more than once in Orders_Production and calculates the "Artificial Revenue" (the sum of the amounts of the duplicate rows).
+
+SOlution:
+DECLARE
+    l_total_fake_revenue NUMBER := 0;
+    l_duplicate_count    NUMBER := 0;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('--- SCENARIO 2: DUPLICATE REVENUE AUDIT ---');
+
+    -- We use a cursor with GROUP BY and HAVING to find the bad rows
+    FOR r_dup IN (
+        SELECT order_id, 
+               COUNT(*) as occurrence_count, 
+               SUM(total_amount) as total_sum,
+               AVG(total_amount) as unit_amount
+        FROM Orders_Production
+        GROUP BY order_id
+        HAVING COUNT(*) > 1
+    ) LOOP
+        -- Calculate the "Fake" part: (Total Sum) minus (One valid instance)
+        -- e.g., If we have two $150 entries, $150 is fake.
+        l_total_fake_revenue := l_total_fake_revenue + (r_dup.total_sum - r_dup.unit_amount);
+        l_duplicate_count    := l_duplicate_count + 1;
+
+        DBMS_OUTPUT.PUT_LINE('[DUPLICATE] Order ID: ' || r_dup.order_id || 
+                             ' | Seen: ' || r_dup.occurrence_count || ' times' ||
+                             ' | Excess Revenue: $' || (r_dup.total_sum - r_dup.unit_amount));
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('-------------------------------------------');
+    DBMS_OUTPUT.PUT_LINE('Total Duplicate IDs Found: ' || l_duplicate_count);
+    DBMS_OUTPUT.PUT_LINE('Total Artificial Revenue:  $' || l_total_fake_revenue);
+    
+END;
