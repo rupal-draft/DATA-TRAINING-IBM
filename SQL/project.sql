@@ -204,3 +204,27 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Total Artificial Revenue:  $' || l_total_fake_revenue);
     
 END;
+
+
+-- # Scenario 5: The "Timezone Shift" (Temporal Accuracy)
+-- ## The Problem
+-- The Warehouse team says orders placed on Friday evening (late night) are showing up in the Saturday report in Production, but they are correctly marked as Friday in Staging.
+-- ## The Suspicion
+-- The server in Staging is set to UTC, but the Production database is set to a local timezone (EST), or the migration script used SYSDATE (current time) instead of the actual order_date from the source.
+-- ## Your Task
+-- Write a reconciliation script that finds any order_id where the order_date in Production is different from the order_date in Staging.
+
+
+SELECT
+    s.order_id,
+    s.order_date                               AS staging_order_date,
+    p.prod_date                                AS production_order_date,
+    (p.prod_date - s.order_date)               AS day_diff,
+    ABS(p.prod_date - s.order_date)            AS abs_day_diff
+FROM   Orders_Staging s
+JOIN   (
+    SELECT order_id, order_date AS prod_date
+    FROM   Orders_Production
+) p ON p.order_id = s.order_id
+WHERE  p.prod_date <> s.order_date
+ORDER  BY s.order_id;
