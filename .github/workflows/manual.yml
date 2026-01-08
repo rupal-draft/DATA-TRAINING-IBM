@@ -1,0 +1,31 @@
+name: Commit Greeting
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Greet contributor
+        run: |
+          echo "👋 Hello ${{ github.actor }}!"
+          echo "Thanks for your commit to this repository 🚀"
+
+      - name: Show commit details
+        run: |
+          echo "📝 Commit message:"
+          echo "${{ github.event.head_commit.message }}"
+          echo ""
+          echo "🔑 Commit SHA:"
+          echo "${{ github.sha }}"
+          echo ""
+          echo "🌿 Branch:"
+          echo "${{ github.ref_name }}"
+
+      - name: Appreciation note
+        run: |
+          echo "👏 We appreciate your contribution!"
