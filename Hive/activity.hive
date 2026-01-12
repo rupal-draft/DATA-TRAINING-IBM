@@ -1,0 +1,12 @@
+-- creating source table 
+create table files(line string);
+--add data
+load data inpath 'hdfs:///user/emiya/something.txt' into table files;
+-- count number of words
+create table word_count as 
+select word, count(word) as no_of_words from
+(select explode (split(line,' ')) as word from files) as w
+group by word
+order by no_of_words;
+-- view final table 
+select * from table word_counts;
