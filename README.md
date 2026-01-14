@@ -6,12 +6,13 @@ Welcome to the **IBM QE-DATA Training** resource hub! Below are the links to the
 ---
 
 ## 🔹 Java Slides
-[View Java Slides](https://slides.com/chandrak/ibm-fst-java-v2-f58083/fullscreen?token=U(https://slides.com/chandrak/dist-ibm-fst-python-v2/fullscreen?token=oiuBaNf4) `e1car0`
+[View Java Slides](https://slides.com/chandrak/ibm-fst-java-v2-f58083/fullscreen?token=U1QszoKt#/6
+) `e1car0`
 
 ---
 
 ## 🔹 Python Slides
-[View python Slides](https://slides.com/chandrak/ibm-fst-java-v2-f58083/fullscreen?token=U(https://slides.com/chandrak/dist-ibm-fst-python-v2/fullscreen?token=oiuBaNf4* `e1car0`
+[View python Slides]( https://slides.com/chandrak/dist-ibm-fst-python-v2/fullscreen?token=oiuBaNf4#/3)* `e1car0`
 
 ---
 
