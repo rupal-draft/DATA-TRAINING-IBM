@@ -16,7 +16,7 @@ Welcome to the **IBM QE-DATA Training** resource hub! Below are the links to the
 ---
 
 ## 🔹 SQL Slides
-[View sql Slides](https://slides.com/chandrak/ibm-fst-java-v2-f58083/fullscreen?token=U(https://slides.com/chandrak/dist-ibm-fst-python-v2/fullscreen?token=oiuBaNf4* `e1car0`
+[View sql Slides](https://slides.com/chandrak/dist-ibm-qe-data-testing-sql/fullscreen?token=ejjn168j)`e1car0`
 
 ---
 
