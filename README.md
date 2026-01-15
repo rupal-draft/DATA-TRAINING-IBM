@@ -1,10 +1,9 @@
 
 # 📚 IBM QE-DATA Training Resources
 
-Welcome to the **IBM QE-DATA Training** resource hub! Below are the links to the training slides for **Java**, **Python**, and **SQL** along with their respective passwords.
+Welcome to the **IBM QE-DATA Training** resource hub! Below are the links to the training slides for **Java**, **Python**, **SQL**, and **Big Data Testing** along with their respective passwords.
 
 ---
-
 ## 🔹 Materials
 🔹 Google Drive folder [link](https://drive.google.com/drive/folders/1jN_gIwYeaTOaFQExF7qlbYZkdlobniuM?usp=sharing)
 
@@ -25,7 +24,6 @@ Welcome to the **IBM QE-DATA Training** resource hub! Below are the links to the
 Slides Password: `e1car0`
 
 ---
-
 
 ### ✅ How to Access
 1. Click on the respective link.
