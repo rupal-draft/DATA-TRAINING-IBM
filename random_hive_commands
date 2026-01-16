@@ -7,3 +7,13 @@ beeline -u jdbc:hive2:// -f /root/activity_uwu.hive
 ```
 "-f" for file flag
 
+## jdbc prompt commands :
+
+- show tables
+```
+show tables;
+```
+- View partitions
+```
+show partitions table_name;
+```
