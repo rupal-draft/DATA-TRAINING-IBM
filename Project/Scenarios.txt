@@ -1,0 +1,24 @@
+# Scenario 1: Character Dialogue Analysis
+
+## Task: 
+Identify which character has the most lines of dialogue in A New Hope (Episode IV).
+
+## Instructions:
+* Load the data from episodeIV_dialogues.txt.
+* Filter out any empty lines or headers (e.g., lines starting with "STAR WARS").
+* Count the number of lines for each character.
+* Order the results in descending order to find the character with the most dialogue.
+
+
+# Scenario 2: Cross-Movie Character Persistence
+
+## Task: 
+Find characters who have dialogue in both The Empire Strikes Back (Episode V) and Return of the Jedi (Episode VI).
+
+## Instructions:
+* Load the dialogues from episodeV_dialogues.txt and episodeVI_dialogues.txt separately.
+* Extract the character names from both datasets.
+    * For example, in Episode V, you will see "HAN", "LEIA", and "LUKE" , and in Episode VI, you will see "VADER", "THREEPIO", and "JABBA".
+* Use the DISTINCT operator on both sets of names to get a unique list of characters for each movie.
+* Use a JOIN operation on the character name to identify those present in both movies.
+* Store the resulting list of recurring characters into a folder
