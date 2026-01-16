@@ -1,0 +1,9 @@
+dont mind me <3
+
+## connect to hive db in command line through beeline:
+
+```
+beeline -u jdbc:hive2:// -f /root/activity_uwu.hive
+```
+"-f" for file flag
+
