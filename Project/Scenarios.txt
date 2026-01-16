@@ -22,3 +22,32 @@ Find characters who have dialogue in both The Empire Strikes Back (Episode V) an
 * Use the DISTINCT operator on both sets of names to get a unique list of characters for each movie.
 * Use a JOIN operation on the character name to identify those present in both movies.
 * Store the resulting list of recurring characters into a folder
+
+# Scenario 3: Sentiment & Keyword Frequency Analysis
+
+## Task:
+Identify the most frequently used words in Darth Vader's dialogue across the entire trilogy to see if his vocabulary is consistently "dark."
+
+## Instructions:
+* Combine the Data: Use the UNION operator to merge the data from all three files (episodeIV_dialogues.txt, episodeV_dialogues.txt, and episodeVI_dialogues.txt) into one large dataset.
+* Isolate the Character: Filter the dataset so you only have lines where the character is "VADER".
+* Break Down the Sentences: Use the TOKENIZE function on the dialogue column to break sentences into individual words.
+* Count and Rank: Group by the word, count the occurrences, and sort them to see Vader's top 10 most used words.
+
+
+# Scenario 4: The "Most Frequently Interrupted"
+
+## Task: 
+Identify which character has the most dialogue lines that end with "..." (indicating they were interrupted or trailed off) in The Empire Strikes Back.
+
+## Challenge: 
+Ensure you are only counting lines from the character column and not descriptions in parentheses, like (into comlink).
+
+## Hints:
+* Pig Latin Focus: Use the ENDSWITH function or a regular expression match (matches '.*\\.\\.\\.').
+* Hive Focus: Use the LIKE operator with escape characters for the periods.
+
+
+-- For removing lines from the top of the file:
+ranked = RANK dialogues;
+clean_dialogues = FILTER ranked BY (rank_dialogues > 2);
