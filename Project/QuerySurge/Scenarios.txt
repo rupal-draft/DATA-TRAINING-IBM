@@ -101,3 +101,59 @@ JOIN DIM_CUSTOMERS t
   ON s.CustomerID = t.CUST_ID
 WHERE s.FIRST_NAME <> t.FIRST_NAME;
 ```
+
+
+=======================================================================
+
+# Scenario 4: Email Address Consistency Check
+
+## Objective
+Ensure email values are preserved correctly from STG to DIM.
+
+## Source Logic
+Select CustomerID, Email from STG_CUSTOMERS.
+
+## Target Logic
+Select CUST_ID, EMAIL_ADDR from DIM_CUSTOMERS.
+
+## Expected Result
+Emails should match exactly for each customer.
+
+## Known Issue
+CustomerID 103 has inconsistent email (missing@corp.com).
+
+## Validation queries
+```
+-- Row Count Validation
+SELECT
+  (SELECT COUNT(*) FROM STG_CUSTOMERS) AS SRC_CNT,
+  (SELECT COUNT(*) FROM DIM_CUSTOMERS) AS TGT_CNT
+FROM dual;
+
+-- Row-Level Comparison to check for mismatches
+SELECT s.CustomerID, s.Email AS SRC_EMAIL, t.EMAIL_ADDR AS TGT_EMAIL
+FROM STG_CUSTOMERS s
+JOIN DIM_CUSTOMERS t
+ON s.CustomerID = t.CUST_ID
+WHERE NVL(s.Email, 'X') <> NVL(t.EMAIL_ADDR, 'X');
+```
+
+
+=======================================================================
+
+# Scenario 5: Active/Inactive Status Transformation Validation
+
+## Objective
+Validate correct transformation of status flags.
+
+## Transformation Rule
+```
+STG.Status = 'A' → DIM.IS_ACTIVE = 1
+STG.Status = 'I' → DIM.IS_ACTIVE = 0
+```
+
+## Expected Result
+All records must follow the rule.
+
+## Known Defect
+CustomerID 109 (Grace Hopper) is marked active in DIM but inactive in STG.
