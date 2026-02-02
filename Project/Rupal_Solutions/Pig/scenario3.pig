@@ -11,16 +11,12 @@ ep6 = LOAD '/root/inputs/episodeVI_dialogues.txt'
       USING PigStorage('\t')
       AS (character:chararray, dialogue:chararray);
 
-ep4_rank = RANK ep4;
-ep5_rank = RANK ep5;
-ep6_rank = RANK ep6;
-
-v4 = FILTER ep4_rank BY UPPER(TRIM(character)) == 'VADER'
-             AND dialogue IS NOT NULL AND TRIM(dialogue) != '' AND rank_ep4>1;
-v5 = FILTER ep5_rank BY UPPER(TRIM(character)) == 'VADER'
-             AND dialogue IS NOT NULL AND TRIM(dialogue) != '' AND rank_ep5>1;
-v6 = FILTER ep6_rank BY UPPER(TRIM(character)) == 'VADER'
-             AND dialogue IS NOT NULL AND TRIM(dialogue) != '' AND rank_ep6>1;
+v4 = FILTER ep4 BY UPPER(TRIM(character)) == 'VADER'
+             AND dialogue IS NOT NULL AND TRIM(dialogue) != '';
+v5 = FILTER ep5 BY UPPER(TRIM(character)) == 'VADER'
+             AND dialogue IS NOT NULL AND TRIM(dialogue) != '';
+v6 = FILTER ep6 BY UPPER(TRIM(character)) == 'VADER'
+             AND dialogue IS NOT NULL AND TRIM(dialogue) != '';
 
 w4 = FOREACH v4 GENERATE FLATTEN(TOKENIZE(LOWER(dialogue))) AS word;
 w5 = FOREACH v5 GENERATE FLATTEN(TOKENIZE(LOWER(dialogue))) AS word;
