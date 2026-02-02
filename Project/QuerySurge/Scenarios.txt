@@ -1,0 +1,159 @@
+# Scenario 1:  Record Count Reconciliation (Active Customers)
+
+## Objective
+Validate that all active customers from the staging table are loaded into the dimension table.
+
+## Source Query Logic
+Count records in STG_CUSTOMERS where Status = 'A'.
+
+## Target Query Logic
+Count records in DIM_CUSTOMERS where IS_ACTIVE = 1.
+
+## Expected Result
+Counts should match.
+
+## Validation query
+The following query should will check the row counts:
+```
+-- Query to check row counts
+SELECT
+  (SELECT COUNT(*) FROM STG_CUSTOMERS WHERE Status = 'A') AS SRC_CNT,
+  (SELECT COUNT(*) FROM DIM_CUSTOMERS WHERE IS_ACTIVE = 1) AS TGT_CNT
+FROM dual;
+
+-- Query to check for mismatched rows
+SELECT t.CUST_ID
+FROM DIM_CUSTOMERS t
+LEFT JOIN STG_CUSTOMERS s
+ON t.CUST_ID = s.CustomerID
+WHERE t.IS_ACTIVE = 1
+AND s.Status <> 'A';
+```
+
+
+=======================================================================
+
+# Scenario 2: Primary Key Mapping Validation
+
+## Objective
+Ensure CustomerID from STG maps correctly to CUST_ID in DIM.
+
+## Source Logic
+Select all CustomerID from STG_CUSTOMERS.
+
+## Target Logic
+Select all CUST_ID from DIM_CUSTOMERS.
+
+## Expected Result
+Every CustomerID must exist in DIM_CUSTOMERS as CUST_ID.
+
+## Validation queries
+```
+-- Query to verify row counts
+SELECT
+  (SELECT COUNT(DISTINCT CustomerID) FROM STG_CUSTOMERS) AS SRC_CNT,
+  (SELECT COUNT(DISTINCT CUST_ID) FROM DIM_CUSTOMERS) AS TGT_CNT
+FROM dual;
+
+-- Query to compare rows and check for rows missing in Target
+SELECT CustomerID
+FROM STG_CUSTOMERS
+MINUS
+SELECT CUST_ID
+FROM DIM_CUSTOMERS;
+```
+
+
+=======================================================================
+
+# Scenario 3: Full Name to First/Last Name Split Validation
+
+## Objective
+Validate correct parsing of FullName into FIRST_NAME and LAST_NAME.
+
+## Source Logic
+Split FullName into first and last name using space delimiter.
+
+## Target Logic
+Compare derived first/last names with FIRST_NAME and LAST_NAME.
+
+## Expected Result
+All names must match exactly.
+
+## Validation queries
+```
+-- Row Count Validation
+SELECT
+  (SELECT COUNT(*) FROM STG_CUSTOMERS WHERE INSTR(FullName, ' ') > 0) AS SRC_CNT,
+  (SELECT COUNT(*) FROM DIM_CUSTOMERS) AS TGT_CNT
+FROM dual;
+
+-- Row-Level Comparison checking for mismatched rows
+SELECT s.CustomerID,
+  s.FIRST_NAME AS SRC_FIRST_NAME,
+  t.FIRST_NAME AS TGT_FIRST_NAME
+FROM (
+  SELECT CustomerID, SUBSTR(FullName, 1, INSTR(FullName, ' ') - 1) AS FIRST_NAME
+  FROM STG_CUSTOMERS
+  WHERE INSTR(FullName, ' ') > 0
+) s
+JOIN DIM_CUSTOMERS t
+  ON s.CustomerID = t.CUST_ID
+WHERE s.FIRST_NAME <> t.FIRST_NAME;
+```
+
+
+=======================================================================
+
+# Scenario 4: Email Address Consistency Check
+
+## Objective
+Ensure email values are preserved correctly from STG to DIM.
+
+## Source Logic
+Select CustomerID, Email from STG_CUSTOMERS.
+
+## Target Logic
+Select CUST_ID, EMAIL_ADDR from DIM_CUSTOMERS.
+
+## Expected Result
+Emails should match exactly for each customer.
+
+## Known Issue
+CustomerID 103 has inconsistent email (missing@corp.com).
+
+## Validation queries
+```
+-- Row Count Validation
+SELECT
+  (SELECT COUNT(*) FROM STG_CUSTOMERS) AS SRC_CNT,
+  (SELECT COUNT(*) FROM DIM_CUSTOMERS) AS TGT_CNT
+FROM dual;
+
+-- Row-Level Comparison to check for mismatches
+SELECT s.CustomerID, s.Email AS SRC_EMAIL, t.EMAIL_ADDR AS TGT_EMAIL
+FROM STG_CUSTOMERS s
+JOIN DIM_CUSTOMERS t
+ON s.CustomerID = t.CUST_ID
+WHERE NVL(s.Email, 'X') <> NVL(t.EMAIL_ADDR, 'X');
+```
+
+
+=======================================================================
+
+# Scenario 5: Active/Inactive Status Transformation Validation
+
+## Objective
+Validate correct transformation of status flags.
+
+## Transformation Rule
+```
+STG.Status = 'A' → DIM.IS_ACTIVE = 1
+STG.Status = 'I' → DIM.IS_ACTIVE = 0
+```
+
+## Expected Result
+All records must follow the rule.
+
+## Known Defect
+CustomerID 109 (Grace Hopper) is marked active in DIM but inactive in STG.
